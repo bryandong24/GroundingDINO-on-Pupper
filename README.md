@@ -1,6 +1,6 @@
 The goal of our project was to support zero-shot vision models on the pupper. We ran Grounding DINO which allowed us to process the images from the camera, and return a target bounding box to lock onto. Since Grounding DINO requires quite a bit of compute, we used a Zenoh bridge to connect ROS2 nodes between our robot and the server.
 
-  <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/rKJtkOiUa4A0HkFyTeKj5N/Untitled?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+![alt text](image.png)
 
 [Link to slides](https://docs.google.com/presentation/d/1DscjwsaXE5AMdKXYatM0UojeO6OOYxdLWSe9gKqW-aA/edit?usp=sharing) (Videos and pictures in slides)
 
@@ -12,7 +12,7 @@ The goal of our project was to support zero-shot vision models on the pupper. We
 - [The server files](https://drive.google.com/drive/folders/1WhypdyoNzZovLyZQYCk08r78Wch0_sGF?usp=sharing)
 
 ### How to run
-1. On the server, pull [this repository](https://github.com/bryandong24/GroundingDINO-Server).
+1. On the server, download the zip file from the Google Drive (the file is too big for github without LFS so we are using Drive).
 2. Navigate to the `GroundingDINO-Server/zenoh-bridge-standalone/` and execute the binary using `zenoh-bridge-ros2dds -e tcp/<robot-ip>:7447`. Be sure to replace `<robot-ip>` with your actual robot ip.
 3. Navigate to `GroundingDino-Server/demo/` and execute the python file `dino_node_ros2_combined.py`
 4. On the robot, `git pull` this repository.\
